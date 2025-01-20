@@ -1,0 +1,230 @@
+.newBody {
+    background-color: #f5f7fa;
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #333333;
+}
+
+.HeaderStyle {
+    background: linear-gradient(180deg, #350032, #c300ff);
+    padding: 20px 0;
+}
+
+.bar2 {
+    padding: 20px 0;
+    background: linear-gradient(180deg, #c300ff, #350032);
+}
+
+.topNav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: left
+}
+
+.topNav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.topNav a:hover {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #350032, #c300ff);
+    color: #ffffff;
+}
+
+.topNav a.active {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #350032, #c300ff);
+}
+
+.fullwidth {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.h1title {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 20px;
+    color: #333333;
+}
+
+.context-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.context-box,
+.context-boxAlt {
+    padding: 25px;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 25%;
+    transition: transform 0.3s ease;
+    background: rgba(173, 118, 187, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+}
+
+.context-box:hover,
+.context-boxAlt:hover {
+    transform: translateY(-10px);
+}
+
+.context-box img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.contexth2A,
+.contexth2B,
+.contexth2C {
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 15px;
+    font-weight: 600;
+
+}
+
+.contextText {
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.newFooter {
+    background: linear-gradient(180deg, #350032, #c300ff);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.newFooter p {
+    margin: 0;
+    font-size: 14px;
+
+}
+
+.fade-in {
+    animation: fadeInScale 1s var(--ease) forwards;
+}
+
+.fade-out {
+    animation: fadeOutSlide 1s var(--ease) forwards;
+}
+
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+
+@keyframes fadeOutSlide {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+}
+
+:root {
+    --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@media (max-width: 100%) {
+    .topNav {
+        flex-direction: column;
+    }
+
+    .context-container {
+        max-block-size: 10%;
+        flex-direction: column;
+    }
+
+    .context-box {
+        max-width: 100%;
+    }
+}
+
+.back {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.example.com/your-background-image.jpg') repeat;
+    animation: moveBackground 30s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
